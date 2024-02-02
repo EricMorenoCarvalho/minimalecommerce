@@ -4,23 +4,5 @@ body {
     overflow-x: hidden;
     color: black;
     text-decoration: none;
+    user-select: none;
   }
-  
-
-@media (max-width: 768px) {
-  .text {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .text {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .text {
-    font-size: 18px;
-  }
-}

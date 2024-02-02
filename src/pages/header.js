@@ -5,13 +5,11 @@ const Header = () => {
   return (
     <header>
       <div className='headercontent'>
-        <a href='#' className='text'>
-          E-Commerce
-        </a>
+        <a href="#" class="logo">E-Commerce</a>
         <div className='header-links'>
-          <a href='' >categories</a>
-          <a href=''>products</a>
-          <a href='' className='cart-link'>
+          <a href='#' >categories</a>
+          <a href='#'>products</a>
+          <a href='#' className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

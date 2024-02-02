@@ -1,0 +1,50 @@
+.maincontent {
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding-top: 7.5vw;
+}
+
+.image-container1,
+.image-container2,
+.image-container3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo1,
+.photo2,
+.photo3 {
+  max-width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out;
+  display: block;
+}
+
+.image-text1 {
+  position: absolute;
+  bottom: 0%;
+  left: 6rem;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Asegurar que el texto esté por encima del fondo oscuro */
+}
+.image-text2,.image-text3 {
+  position: absolute;
+  bottom: 8.5rem;
+  left: 4rem;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Asegurar que el texto esté por encima del fondo oscuro */
+}
+
+.image-text1, .image-text2, .image-text3{
+  font-size: 1.7rem;
+}
+
+.photo1:hover,
+.photo2:hover,
+.photo3:hover {
+  filter: brightness(80%);
+}
