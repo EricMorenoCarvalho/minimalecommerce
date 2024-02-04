@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/home.css';
 import main1 from '../images/main1.jpg';
 import main2 from '../images/main2.jpg';
 import main3 from '../images/main3.jpg';
+import { PRODUCTS } from '../products';  // Asegúrate de ajustar la ruta correctamente
 
 const Home = () => {
+  const [randomProducts, setRandomProducts] = useState([]);
+
+  const getRandomProducts = () => {
+    const shuffledProducts = PRODUCTS.sort(() => 0.5 - Math.random());
+    const selectedProducts = shuffledProducts.slice(0, 5);
+    setRandomProducts(selectedProducts);
+  };
+
+  useEffect(() => {
+    getRandomProducts();
+  }, []);
+
   return (
     <div className='maincontent'>
       <div className='mainflex'>
@@ -19,6 +32,18 @@ const Home = () => {
         <div className='image-container3'>
           <img alt='photo3' src={main3} className='photo3' />
           <p className='image-text text'>Tables</p>
+        </div>
+      </div>
+      <div className='ourproducts'>
+        <p className='title'>Our products</p>
+        <div className='mainflexproducts'>
+          {randomProducts.map(product => (
+            <div key={product.id} className='mainproducts'>
+              <img alt={product.productName} src={product.productImgs[0]} className='productimages'/>
+              <p className='text nowrap'>{product.productName}</p>
+              <p>${product.price}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

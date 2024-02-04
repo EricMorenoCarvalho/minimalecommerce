@@ -28,8 +28,25 @@ body {
   transition: 0.4s;
 }
 
+.title{
+  font-size: 1.8rem;
+  transition: 0.4s;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
 @media (max-width: 960px) {
 }
 
 @media (max-width: 768px) {
+  .text {
+    font-size: 1.2rem;
+    transition: 0.4s;
+  }
+  .title{
+    font-size: 1.4rem;
+    transition: 0.4s;
+  }
 }
