@@ -83,6 +83,21 @@
   filter: brightness(80%);
 }
 
+@media (max-width: 850px) {
+
+  .mainflex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .image-container1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
 @media (max-width: 550px) {
   .mainflex {
     justify-content: center; /* Centrar elementos en pantallas más pequeñas */
