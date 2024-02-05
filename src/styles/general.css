@@ -37,16 +37,23 @@ body {
   white-space: nowrap;
 }
 
-@media (max-width: 960px) {
-}
-
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .text {
     font-size: 1.2rem;
     transition: 0.4s;
   }
   .title{
     font-size: 1.4rem;
+    transition: 0.4s;
+  }
+}
+@media (max-width: 550px) {
+  .text {
+    font-size: 0.8rem;
+    transition: 0.4s;
+  }
+  .title{
+    font-size: 1.2rem;
     transition: 0.4s;
   }
 }

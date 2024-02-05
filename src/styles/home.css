@@ -2,36 +2,43 @@
   margin: 0;
   padding: 0;
   top: 0;
-  position: relative; /* Cambiado a relative para que no se salga de la página */
+  position: relative;
   overflow: hidden;
   overflow-x: hidden;
   margin-left: 2rem;
   margin-right: 2rem;
-  margin-top: 9rem;
+  margin-top: 8rem;
 }
 
-.mainflex {
-  display: flex;
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas más pequeñas */
+.maingrid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 1rem;
 }
 
-.image-container1 {
-  flex: 2;
+.image-container1,
+.image-container2,
+.image-container3,
+.image-container4,
+.image-container5 {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 55rem;
+  max-height: 21rem;
+  height: auto;
 }
 
-.image-container2,
-.image-container3 {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
+.image-container5 {
+  grid-column: span 2;
 }
 
 .photo1,
 .photo2,
-.photo3 {
+.photo3,
+.photo4,
+.photo5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -50,32 +57,33 @@
 
 .photo1:hover,
 .photo2:hover,
-.photo3:hover {
+.photo3:hover,
+.photo4:hover,
+.photo5:hover {
   filter: brightness(80%);
 }
 
 .ourproducts {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-.mainflexproducts {
+.mainflex {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; /* Reducido el espacio entre elementos */
+  gap: 0rem;
   align-items: center;
   text-align: center;
   justify-content: center;
   margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 .mainproducts {
-  flex: 1; /* Ocupa todo el ancho disponible */
+  flex: 1;
 }
 
 .productimages {
-  width: 100%; /* Ajustado para ocupar todo el ancho del contenedor padre */
-  max-width: 18.75rem; /* Ancho máximo */
-  max-height: 28.125 rem;
+  width: 100%;
   height: auto;
 }
 
@@ -83,23 +91,43 @@
   filter: brightness(80%);
 }
 
-@media (max-width: 850px) {
-
-  .mainflex {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
+@media (max-width: 1367px) {
+  .maincontent {
+    margin-top: 6.5rem;
   }
 
-  .image-container1 {
-    grid-column: span 2;
-    grid-row: span 2;
+  .image-container1,
+  .image-container2,
+  .image-container3,
+  .image-container4,
+  .image-container5 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 55rem;
+    max-height: 20rem;
+    height: auto;
   }
 }
 
-@media (max-width: 550px) {
-  .mainflex {
-    justify-content: center; /* Centrar elementos en pantallas más pequeñas */
+@media (max-width: 1281px) {
+
+  .image-container1,
+  .image-container2,
+  .image-container3,
+  .image-container4,
+  .image-container5 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 55rem;
+    max-height: 18.5rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .maincontent{
+    margin-top: 8rem;
   }
 }
