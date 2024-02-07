@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import Header from './pages/header.js';
-import Home from './pages/home.js';
+import Header from './components/header.jsx';
+import Home from './pages/home.jsx';
 import '@fontsource/ubuntu';
 import './styles/general.css';
 
