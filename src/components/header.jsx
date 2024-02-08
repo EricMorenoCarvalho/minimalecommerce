@@ -1,12 +1,13 @@
 import React from 'react';
+import '../components/header.css';
 
 const Header = () => {
   return (
     <header>
       <div className='headercontent'>
-        <a href="#" className="logo">E-Commerce</a>
+        <a href="#" className="title">E-Commerce</a>
         <div className='header-links'>
-          <a href='products.js'>products</a>
+          <a href='#' className='header-links-text'>Products</a>
           <a href='#' className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"

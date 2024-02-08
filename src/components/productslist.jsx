@@ -77,7 +77,7 @@ export const PRODUCTSLIST = [
     },
     {
         id: 6,
-        productName: "Ceramic Table Lamp",
+        productName: "Ceramic Lamp",
         price: 39.99,
         productImgs: [img6, img6_1],
         description: "Modern Ceramic Table Lamp, priced at $39.99. Enhance your space with stylish lighting, perfect for any room."

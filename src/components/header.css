@@ -10,7 +10,6 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
-    text-transform: uppercase;
     height: 9vh;
   }
   
@@ -23,6 +22,10 @@ header {
     text-decoration: none;
   }
 
+  .header-links-text{
+    font-size: 1.5rem;
+  }
+
   .header-links {
     transition: 0.8s;
     display: flex;
@@ -31,64 +34,35 @@ header {
     width: 100%;
     gap: 2rem;
   }
+
+  .header-links-text:hover{
+    text-decoration: underline;
+  }
   
   a {
     color: black;
     text-decoration: none;
   }
 
-  .header-links a:hover {
-    text-decoration: underline;
-  }
-
-  .logo {
-    font-size: 25px;
-  }
-
-  .logo:hover{
-    text-decoration: underline;
-  }
-
-  .header-links a{
-    font-size: 17px;
-  }
-
   @media (max-width: 960px) {
-    .logo {
-      font-size: 22.5px;
-    }
-
     .header-links {
       gap: 1.5rem;
     }
-
-    .header-links a{
-      font-size: 16px;
+    .header-links-text{
+      font-size: 1.3rem;
     }
   }
 
   @media (max-width: 768px) {
-  
-    .logo {
-      font-size: 22px;
-    }
-
     .header-links {
       gap: 1.5rem;
     }
-
-    .header-links a{
-      font-size: 15px;
+    .header-links-text{
+      font-size: 1.1rem;
     }
   }
 
   @media (max-width: 550px) {
-    .logo {
-      font-size: 21px;
-    }
-    .header-links a{
-      font-size: 14px;
-    }
     .header-links {
       gap: 1rem;
     }
@@ -105,17 +79,5 @@ header {
     .header-links {
       gap: 0.75rem;
     }
-    .header-links a{
-      font-size: 13px;
-    }
-  }
-  @media (max-width: 320px) {
-    .logo {
-      font-size: 16px;
-    }
-    .header-links a{
-      font-size: 12px;
-    }
-
   }
   
