@@ -7,9 +7,9 @@ const ShopNow = () => {
       <div className='shopnow-text'>
         <text className='title'>Elevate Your Space with Style & Comfort.</text>
         <p className='text'>
-        Discover the perfect furniture for your home in our collection. Stay on top of the latest trends and elevate your space with high-quality pieces.
+        Discover stylish furniture to elevate your home. Explore our collection for on-trend pieces that redefine your space.
         </p>
-        <a href="#" className="button">Shop Now</a>
+        <a href="" className="button">Shop Now</a>
       </div>
       <img alt='shopnow' src={imgshopnow} className='image-shopnow' />
     </div>

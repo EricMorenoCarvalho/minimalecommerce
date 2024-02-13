@@ -11,6 +11,8 @@ header {
     align-items: center;
     z-index: 10000;
     height: 9vh;
+    color: black;
+    text-decoration: none;
   }
   
   .headercontent {
@@ -29,19 +31,23 @@ header {
   .header-links {
     transition: 0.8s;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
     width: 100%;
     gap: 2rem;
   }
 
-  .header-links-text:hover{
-    text-decoration: underline;
-  }
-  
-  a {
+  .header-links a{
     color: black;
     text-decoration: none;
+  }
+
+  .logo{
+    color: black;
+    text-decoration: none;
+  }
+
+  .header-links-text:hover{
+    text-decoration: underline;
   }
 
   @media (max-width: 960px) {
@@ -71,9 +77,6 @@ header {
     .headercontent{
       margin-left: 5%;
       margin-right: 5%;
-    }
-    .logo {
-      font-size: 17.5px;
     }
 
     .header-links {

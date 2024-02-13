@@ -5,12 +5,29 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   overflow-x: hidden;
-  color: black;
   text-decoration: none;
   user-select: none;
 }
 
+button{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
 .button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.button-input {
+  height: 1.5rem;
+  width: 10rem;
   display: inline-block;
   text-align: center;
   padding: 10px 20px;

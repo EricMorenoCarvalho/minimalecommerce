@@ -1,0 +1,23 @@
+footer {
+    background-color: black;
+    height: 15rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    color: white;
+    text-decoration: none;
+    transition: 0.8s;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
