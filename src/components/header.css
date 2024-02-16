@@ -24,14 +24,11 @@ header {
     text-decoration: none;
   }
 
-  .header-links-text{
-    font-size: 1.5rem;
-  }
-
   .header-links {
     transition: 0.8s;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: 100%;
     gap: 2rem;
   }

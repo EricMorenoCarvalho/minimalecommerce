@@ -9,12 +9,13 @@ body {
   user-select: none;
 }
 
-button{
+button {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
 }
 
-.button {
+.button,
+.button-input {
   display: inline-block;
   text-align: center;
   padding: 10px 20px;
@@ -28,20 +29,16 @@ button{
 .button-input {
   height: 1.5rem;
   width: 10rem;
-  display: inline-block;
-  text-align: center;
-  padding: 10px 20px;
-  color: black;
-  text-decoration: none;
-  border: 2px solid black;
-  transition: background-color 0.3s, color 0.3s;
-  margin-bottom: 1rem;
 }
 
 .button:hover {
   background-color: black;
   color: white;
   text-decoration: underline;
+}
+
+.underline:hover{ 
+  text-decoration: underline; 
 }
 
 ::-webkit-scrollbar {
@@ -62,21 +59,44 @@ button{
   transition: 0.4s;
 }
 
-.title{
-  font-size: 2rem;
+.text-small {
+  font-size: 1.2rem;
   transition: 0.4s;
 }
 
-.nowrap{
+.text-xs {
+  font-size: 0.8rem; /* Ajusta el valor según tus preferencias */
+  transition: 0.4s;
+}
+
+.title {
+  font-size: 1.8rem;
+  transition: 0.4s;
+}
+
+.nowrap {
   white-space: nowrap;
+}
+
+.svg{
+  width: 100%;
 }
 
 @media (max-width: 850px) {
   .text {
     font-size: 1.2rem;
   }
-  .title{
-    font-size: 1.8rem;
+  .text-small {
+    font-size: 1rem;
+  }
+  .text-xs {
+    font-size: 0.7rem;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .svg{
+    width: 75%;
   }
 }
 
@@ -84,16 +104,28 @@ button{
   .text {
     font-size: 1rem;
   }
-  .title{
-    font-size: 1.6rem;
+  .text-small {
+    font-size: 0.8rem;
+  }
+  .text-xs {
+    font-size: 0.6rem;
+  }
+  .title {
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 400px) {
-  .text{
+  .text {
     font-size: 0.8rem;
   }
-  .title{
-    font-size: 1.4rem;
+  .text-xs {
+    font-size: 0.5rem;
+  }
+  .text-small {
+    font-size: 0.7rem;
+  }
+  .title {
+    font-size: 1.2rem;
   }
 }

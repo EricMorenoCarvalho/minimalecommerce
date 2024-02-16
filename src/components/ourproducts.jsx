@@ -21,12 +21,12 @@ const OurProducts = () => {
         {randomProducts.map(product => (
           <a key={product.id} href="" className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
-            <p className='text nowrap'>{product.productName}</p>
-            <p>${product.price}</p>
+            <p className='text-small nowrap'>{product.productName}</p>
+            <p className='text-xs'>${product.price}</p>
           </a>
         ))}
       </div>
-      <a href="" className="button">See More</a>
+      <a href="" className="button text-small">See More</a>
     </div>
   );
 };

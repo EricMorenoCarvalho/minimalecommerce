@@ -7,8 +7,8 @@ const Header = () => {
       <div className='headercontent'>
         <a href="" className="title logo">E-Commerce</a>
         <div className='header-links'>
-          <a href='' className='header-links-text'>Home</a>
-          <a href='' className='header-links-text'>Products</a>
+          <a href='' className='text-small'>Home</a>
+          <a href='' className='text-small'>Products</a>
           <a href='' className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const Header = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="tabler-icon tabler-icon-shopping-cart"
+              className="svg"
             >
               <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
               <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
