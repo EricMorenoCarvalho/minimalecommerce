@@ -26,7 +26,7 @@ const OurProducts = () => {
           </a>
         ))}
       </div>
-      <a href="" className="button text-small">See More</a>
+      <a href="" className="button text-xs">See More</a>
     </div>
   );
 };

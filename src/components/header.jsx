@@ -1,5 +1,7 @@
 import React from 'react';
 import '../components/header.css';
+import Home from '../pages/home.jsx';
+import ProductsPage from '../pages/productspage.jsx';
 
 const Header = () => {
   return (
@@ -7,8 +9,8 @@ const Header = () => {
       <div className='headercontent'>
         <a href="" className="title logo">E-Commerce</a>
         <div className='header-links'>
-          <a href='' className='text-small'>Home</a>
-          <a href='' className='text-small'>Products</a>
+          <a href='' className='text-small underline'>Home</a>
+          <a href='' className='text-small underline'>Products</a>
           <a href='' className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
