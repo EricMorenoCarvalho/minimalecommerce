@@ -1,17 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../components/header.css';
-import Home from '../pages/home.jsx';
-import ProductsPage from '../pages/productspage.jsx';
 
 const Header = () => {
   return (
     <header>
       <div className='headercontent'>
-        <a href="" className="title logo">E-Commerce</a>
+        <Link to="/" className="title logo">E-Commerce</Link>
         <div className='header-links'>
-          <a href='' className='text-small underline'>Home</a>
-          <a href='' className='text-small underline'>Products</a>
-          <a href='' className='cart-link'>
+          <Link to="/" className='text-small underline'>Home</Link>
+          <Link to="/products" className='text-small underline'>Products</Link>
+          <Link to="/" className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -29,7 +28,7 @@ const Header = () => {
               <path d="M17 17h-11v-14h-2"></path>
               <path d="M6 5l14 1l-1 7h-13"></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

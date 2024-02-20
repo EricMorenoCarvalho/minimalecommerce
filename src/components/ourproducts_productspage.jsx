@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { PRODUCTSLIST } from '../components/productslist';
+import { PRODUCTSLIST } from './productslist';
 
 const OurProducts = () => {
-  const [randomProducts, setRandomProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
 
-  const getRandomProducts = () => {
+  const getAllProducts = () => {
     const shuffledProducts = PRODUCTSLIST.sort(() => 0.5 - Math.random());
-    const selectedProducts = shuffledProducts.slice(0, 8);
-    setRandomProducts(selectedProducts);
+    setAllProducts(shuffledProducts);
   };
 
   useEffect(() => {
-    getRandomProducts();
+    getAllProducts();
   }, []);
 
   return (
     <div className='ourproducts'>
-      <p className='title'>Our products</p>
       <div className='gridproducts'>
-        {randomProducts.map(product => (
+        {allProducts.map(product => (
           <a key={product.id} href="" className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
             <p className='text nowrap'>{product.productName}</p>
