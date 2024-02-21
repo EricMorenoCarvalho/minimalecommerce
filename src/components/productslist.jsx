@@ -48,7 +48,7 @@ export const PRODUCTSLIST = [
         weight: "15 kg",
         material: "Solid Oak Wood",
         productImgs: [img1, img1_1],
-        description: "A stylish and durable rectangular wood table. Dimensions: 120 cm x 75 cm x 60 cm. Crafted with solid oak wood, perfect for dining or as a workspace."
+        description: "A stylish and durable rectangular wood table. Crafted with solid oak wood, perfect for dining or as a workspace."
     },
     {
         id: 2,
@@ -58,7 +58,7 @@ export const PRODUCTSLIST = [
         weight: "5 kg",
         material: "Steel and Glass",
         productImgs: [img2, img2_1],
-        description: "Compact and charming, this little round table is ideal for small spaces. Diameter: 50 cm. Height: 40 cm. Perfect for coffee or as a decorative side table."
+        description: "Compact and charming, this little round table is ideal for small spaces. Perfect for coffee or as a decorative side table."
     },
     {
         id: 3,
@@ -68,7 +68,7 @@ export const PRODUCTSLIST = [
         weight: "18 kg",
         material: "High-density Fiberboard with White Lacquer",
         productImgs: [img3, img3_1],
-        description: "An elegant and versatile white round table with extendable features. Diameter: 90 cm (extends up to 120 cm). Height: 75 cm. Ideal for both intimate dinners and larger gatherings."
+        description: "An elegant and versatile white round table with extendable features. Ideal for both intimate dinners and larger gatherings."
     },
     {
         id: 4,
@@ -78,7 +78,7 @@ export const PRODUCTSLIST = [
         weight: "8 kg",
         material: "Pine Wood with Natural Finish",
         productImgs: [img4, img4_1],
-        description: "A charming wooden side table with a natural finish. Dimensions: 45 cm x 45 cm x 55 cm. Perfect for adding a touch of warmth to any living space."
+        description: "A charming wooden side table with a natural finish. Perfect for adding a touch of warmth to any living space."
     },
     {
         id: 5,

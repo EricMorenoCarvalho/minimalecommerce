@@ -17,7 +17,7 @@ const OurProducts = () => {
     <div className='ourproducts'>
       <div className='gridproducts'>
         {allProducts.map(product => (
-          <a key={product.id} href="" className='mainproducts'>
+          <a key={product.id} href={`/product/${product.id}`} className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
             <p className='text nowrap'>{product.productName}</p>
             <p className='text-small'>${product.price}</p>

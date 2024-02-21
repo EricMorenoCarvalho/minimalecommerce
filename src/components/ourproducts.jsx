@@ -19,7 +19,7 @@ const OurProducts = () => {
       <p className='title'>Our products</p>
       <div className='gridproducts'>
         {randomProducts.map(product => (
-          <a key={product.id} href="" className='mainproducts'>
+          <a key={product.id} href={`/product/${product.id}`} className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
             <p className='text nowrap'>{product.productName}</p>
             <p className='text-small'>${product.price}</p>

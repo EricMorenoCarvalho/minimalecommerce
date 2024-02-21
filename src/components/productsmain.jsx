@@ -4,10 +4,10 @@ const ProductsMain = () => {
   return (
     <div className='productsmain'>
       <p className='title'>
-        Our products
-        </p>
+        Explore the Essence of Elegance
+      </p>
       <p className='title'>
-        Our products
+        Uncover Our Exquisite Furniture Collection
       </p>
     </div>
   );

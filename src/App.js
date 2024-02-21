@@ -1,18 +1,18 @@
 import React from 'react';
-import Home from './pages/home.jsx';
-import ProductsPage from './pages/productspage.jsx';
+import Home from './pages/home';
+import ProductsPage from './pages/productspage';
+import ProductDetailPage from './pages/productdetailpage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/:productId" element={<ProductDetailPage />} />
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 
