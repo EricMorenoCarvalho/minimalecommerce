@@ -8,8 +8,8 @@ const Header = () => {
       <div className='headercontent'>
         <Link to="/" className="title logo">E-Commerce</Link>
         <div className='header-links'>
-          <Link to="/" className='text-small underline'>Home</Link>
-          <Link to="/products" className='text-small underline'>Products</Link>
+          <Link to="/" className='text underline'>Home</Link>
+          <Link to="/products" className='text underline'>Products</Link>
           <Link to="/" className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -24,7 +24,7 @@ const OurProducts = () => {
           </a>
         ))}
       </div>
-      <a href="" className="button text-small button-seemore">See More</a>
+
     </div>
   );
 };

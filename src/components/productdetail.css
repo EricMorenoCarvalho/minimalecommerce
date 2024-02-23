@@ -1,0 +1,42 @@
+.productdetail {
+  display: flex;
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.slick-slider {
+  width: 100%;
+}
+
+.productimages1 {
+  max-width: 100%;
+  max-height: 42.5rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.productdetailslider{
+  width: 30%;
+}
+
+.productdetailtext{
+  text-align: center;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .productdetail{
+    display: block;
+  }
+  .productdetailslider{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
+  .productdetailtext{
+    margin-top: 2.5rem;
+  }
+}
