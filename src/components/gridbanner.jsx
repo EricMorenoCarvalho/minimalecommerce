@@ -12,31 +12,31 @@ const GridBanner = () => {
         <a href="">
           <img alt='photo1' src={main1} className='photo1' />
         </a>
-        <p className='image-text title'>Everything</p>
+        <p className='image-text text'>Everything</p>
       </div>
       <div className='image-container2'>
         <a href="">
           <img alt='photo2' src={main2} className='photo2' />
         </a>
-        <p className='image-text title'>Chairs</p>
+        <p className='image-text text'>Chairs</p>
       </div>
       <div className='image-container3'>
         <a href="">
           <img alt='photo3' src={main3} className='photo3' />
         </a>
-        <p className='image-text title'>Tables</p>
+        <p className='image-text text'>Tables</p>
       </div>
       <div className='image-container4'>
         <a href="">
           <img alt='photo4' src={main4} className='photo4' />
         </a>
-        <p className='image-text title'>Sofas</p>
+        <p className='image-text text'>Sofas</p>
       </div>
       <div className='image-container5'>
         <a href="">
           <img alt='photo5' src={main5} className='photo5' />
         </a>
-        <p className='image-text title'>Lamps</p>
+        <p className='image-text text'>Lamps</p>
       </div>
     </div>
   );
