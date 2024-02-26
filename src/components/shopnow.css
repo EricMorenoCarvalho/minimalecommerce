@@ -1,0 +1,22 @@
+.shop-now {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+    display: flex;
+    height: 30rem;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #e9e8e8;
+  }
+  
+  .shopnow-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .image-shopnow {
+    width: 100%;
+    object-fit: cover;
+  }

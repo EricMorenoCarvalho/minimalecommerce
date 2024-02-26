@@ -1,0 +1,39 @@
+.custom-ourproducts {
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-gridproducts {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.custom-gridproducts::-webkit-scrollbar {
+  height: 10px;
+}
+
+.custom-mainproducts {
+  flex: 0 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.productimages2 {
+  width: 100%;
+  max-width: 20rem;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+  .custom-productimages {
+    width: 100%;
+    max-width: 10rem;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+}

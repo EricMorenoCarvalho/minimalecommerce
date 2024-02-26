@@ -1,9 +1,11 @@
 .productdetail {
   display: flex;
   width: 100%;
-  margin-top: 7rem;
+  height: 100%;
+  margin-top: 8rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-bottom: 7rem;
 }
 
 .slick-slider {

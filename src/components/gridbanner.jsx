@@ -4,12 +4,13 @@ import main2 from '../images/main2.jpg';
 import main3 from '../images/main3.jpg';
 import main4 from '../images/main4.jpg';
 import main5 from '../images/main5.jpeg';
+import './gridbanner.css';
 
 const GridBanner = () => {
   return (
     <div className='maingrid'>
       <div className='image-container1'>
-        <a href="">
+        <a href="/products">
           <img alt='photo1' src={main1} className='photo1' />
         </a>
         <p className='image-text text'>Everything</p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import imgshopnow from '../images/shopnow.jpg';
+import './shopnow.css';
 
 const ShopNow = () => {
   return (

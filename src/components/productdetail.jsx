@@ -36,10 +36,11 @@ const ProductDetail = () => {
         </Slider>
       <div className='productdetailtext'>
         <p className='title'>{product.productName}</p>
+        <p className='text'>${product.price}</p>
         <p className='text-small'>{product.description}</p>
         <p className='text-small'>Material: {product.material}</p>
+        <p className='text-small'>Weight: {product.weight}</p>
         <p className='text-small'>Dimensions: {product.dimensions}</p>
-        <p className='text'>${product.price}</p>
         <p className='text'>Category: {product.category}</p>
       </div>
     </div>

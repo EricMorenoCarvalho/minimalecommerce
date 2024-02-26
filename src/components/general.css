@@ -1,6 +1,5 @@
 body {
   max-width: 100%;
-  overflow-x: hidden;
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
@@ -36,7 +35,7 @@ button {
   text-decoration: underline;
 }
 
-.underline:hover{ 
+.underline:hover{
   text-decoration: underline; 
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PRODUCTSLIST } from '../components/productslist';
+import '../components/ourproducts.css';
 
 const OurProducts = () => {
   const [randomProducts, setRandomProducts] = useState([]);
