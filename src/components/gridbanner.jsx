@@ -5,39 +5,41 @@ import main3 from '../images/main3.jpg';
 import main4 from '../images/main4.jpg';
 import main5 from '../images/main5.jpeg';
 import './gridbanner.css';
+import { Link } from 'react-router-dom';
 
 const GridBanner = () => {
   return (
     <div className='maingrid'>
       <div className='image-container1'>
-        <a href="/products">
+        <Link to={"/products"}>
           <img alt='photo1' src={main1} className='photo1' />
-        </a>
-        <p className='image-text text'>Everything</p>
+          <p className='image-text text underline'>Everything</p>
+        </Link>
       </div>
       <div className='image-container2'>
-        <a href="">
+        <Link to={"/products/chairs"}>
           <img alt='photo2' src={main2} className='photo2' />
-        </a>
-        <p className='image-text text'>Chairs</p>
+          <p className='image-text text underline'>Chairs</p>
+        </Link>
       </div>
       <div className='image-container3'>
-        <a href="">
+        <Link to={"products/tables"}>
           <img alt='photo3' src={main3} className='photo3' />
-        </a>
-        <p className='image-text text'>Tables</p>
+          <p className='image-text text underline'>Tables</p>
+        </Link>
       </div>
       <div className='image-container4'>
-        <a href="">
+        <Link to={"products/sofas"}>
           <img alt='photo4' src={main4} className='photo4' />
-        </a>
-        <p className='image-text text'>Sofas</p>
+          <p className='image-text text underline'>Sofas</p>
+        </Link>
       </div>
       <div className='image-container5'>
-        <a href="">
+        <Link to={"products/lamps"}>
           <img alt='photo5' src={main5} className='photo5' />
-        </a>
-        <p className='image-text text'>Lamps</p>
+          <p className='image-text text underline'>Lamps</p>
+        </Link>
+        
       </div>
     </div>
   );

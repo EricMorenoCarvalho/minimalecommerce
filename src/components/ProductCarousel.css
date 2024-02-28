@@ -10,7 +10,7 @@
 }
 
 .custom-gridproducts::-webkit-scrollbar {
-  height: 10px;
+  height: 9px;
 }
 
 .custom-mainproducts {
@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 1000px) {
-  .custom-productimages {
+  .productimages2 {
     width: 100%;
     max-width: 10rem;
     object-fit: cover;

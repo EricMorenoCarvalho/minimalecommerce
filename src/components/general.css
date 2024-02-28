@@ -8,6 +8,30 @@ body {
   user-select: none;
 }
 
+.black-text{
+  color: black;
+}
+
+.bg-black{
+  color: black;
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+}
+
+.bg-black:hover{
+  background-color: black;
+  color: white;
+}
+
+.white-text{
+  color: white;
+}
+
+.td-none{
+  text-decoration: none;
+}
+
 button {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
@@ -32,7 +56,6 @@ button {
 .button:hover {
   background-color: black;
   color: white;
-  text-decoration: underline;
 }
 
 .underline:hover{
@@ -52,8 +75,12 @@ button {
   background-color: black;
 }
 
+.title-xl{
+  font-size: 3rem;
+}
+
 .text {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   transition: 0.4s;
 }
 
@@ -82,16 +109,19 @@ button {
 
 @media (max-width: 850px) {
   .text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .text-small {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .text-xs {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+  }
+  .title-xl {
+    font-size: 2.8rem;
   }
   .svg{
     width: 75%;
@@ -100,30 +130,36 @@ button {
 
 @media (max-width: 550px) {
   .text {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .text-small {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .text-xs {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  .title-xl {
+    font-size: 2.6rem;
   }
 }
 
 @media (max-width: 400px) {
   .text {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .text-xs {
-    font-size: 0.6rem;
-  }
-  .text-small {
     font-size: 0.7rem;
   }
+  .text-small {
+    font-size: 0.8rem;
+  }
   .title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+  .title-xl {
+    font-size: 2.4rem;
   }
 }

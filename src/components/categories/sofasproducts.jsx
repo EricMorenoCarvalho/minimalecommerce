@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { PRODUCTSLIST } from './productslist';
+import { PRODUCTSLIST } from '../productslist';
 
-const OurProductsProductsPage = () => {
-  const [allProducts, setAllProducts] = useState([]);
+const SofasProducts = () => {
+  const [chairProducts, setChairProducts] = useState([]);
 
-  const getAllProducts = () => {
-    const shuffledProducts = PRODUCTSLIST.sort(() => 0.5 - Math.random());
-    setAllProducts(shuffledProducts);
+  const getChairProducts = () => {
+    const chairs = PRODUCTSLIST.filter(product => product.category === 'Sofas');
+    const shuffledChairs = chairs.sort(() => 0.5 - Math.random());
+    setChairProducts(shuffledChairs);
   };
 
   useEffect(() => {
-    getAllProducts();
+    getChairProducts();
   }, []);
 
   return (
     <div className='ourproducts'>
       <div className='gridproducts'>
-        {allProducts.map(product => (
+        {chairProducts.map(product => (
           <a key={product.id} href={`/products/${product.id}`} className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
             <p className='text nowrap underline'>{product.productName}</p>
@@ -24,9 +25,8 @@ const OurProductsProductsPage = () => {
           </a>
         ))}
       </div>
-
     </div>
   );
 };
 
-export default OurProductsProductsPage;
+export default SofasProducts;

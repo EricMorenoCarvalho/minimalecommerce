@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PRODUCTSLIST } from '../components/productslist';
 import '../components/ourproducts.css';
+import { Link } from 'react-router-dom';
 
 const OurProducts = () => {
   const [randomProducts, setRandomProducts] = useState([]);
@@ -22,12 +23,14 @@ const OurProducts = () => {
         {randomProducts.map(product => (
           <a key={product.id} href={`/products/${product.id}`} className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
-            <p className='text nowrap'>{product.productName}</p>
+            <p className='text nowrap underline'>{product.productName}</p>
             <p className='text-small'>${product.price}</p>
           </a>
         ))}
       </div>
-      <a href="" className="button text-small button-seemore">See More</a>
+      <Link to={"/products"}>
+      <text className="button text-small button-seemore">See More</text>
+      </Link>
     </div>
   );
 };

@@ -23,7 +23,7 @@ const ProductCarousel = () => {
         {allProducts.slice(0, visibleProducts).map(product => (
           <a key={product.id} href={`/products/${product.id}`} className='custom-mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages2' />
-            <p className='text'>{product.productName}</p>
+            <p className='text underline'>{product.productName}</p>
             <p className='text-small'>${product.price}</p>
           </a>
         ))}

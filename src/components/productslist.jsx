@@ -141,7 +141,7 @@ export const PRODUCTSLIST = [
   },
   {
     id: 10,
-    category: "Outdoor",
+    category: "Lamps",
     productName: "Wireless Solar Lamp",
     price: 19.99,
     dimensions: "20 cm x 20 cm x 30 cm",
