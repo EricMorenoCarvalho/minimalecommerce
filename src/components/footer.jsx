@@ -1,14 +1,13 @@
 import React from 'react';
 import '../components/footer.css';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer>
       <div className='footer-links'>
-      <Link to="/" className="title logo">E-Commerce</Link>
-          <Link to="/" className='text underline'>Home</Link>
-          <Link to="/products" className='text underline'>Products</Link>
+      <a href="/" className="title logo">E-Commerce</a>
+          <a href="/" className='text underline'>Home</a>
+          <a href="/products" className='text underline'>Products</a>
       </div>
       <div className='footer-right'>
         <text className='text-xs'> Copyright © 2024. All rights are reserved. Made by Eric Moreno</text>

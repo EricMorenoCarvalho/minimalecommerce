@@ -1,11 +1,10 @@
-// ProductCarousel.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { PRODUCTSLIST } from './productslist';
 import './ProductCarousel.css';
 
 const ProductCarousel = () => {
   const [allProducts, setAllProducts] = useState([]);
-  const [visibleProducts, setVisibleProducts] = useState(20);
+  const [visibleProducts, setVisibleProducts] = useState(10);
   const productContainerRef = useRef();
 
   const getAllProducts = () => {
@@ -19,6 +18,7 @@ const ProductCarousel = () => {
 
   return (
     <div className='custom-ourproducts'>
+      <text className='title more-products'>More Products</text>
       <div className='custom-gridproducts' ref={productContainerRef}>
         {allProducts.slice(0, visibleProducts).map(product => (
           <a key={product.id} href={`/products/${product.id}`} className='custom-mainproducts'>

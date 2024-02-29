@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PRODUCTSLIST } from '../components/productslist';
 import '../components/ourproducts.css';
-import { Link } from 'react-router-dom';
 
 const OurProducts = () => {
   const [randomProducts, setRandomProducts] = useState([]);
@@ -28,9 +27,9 @@ const OurProducts = () => {
           </a>
         ))}
       </div>
-      <Link to={"/products"}>
+      <a href={"/products"}>
       <text className="button text-small button-seemore">See More</text>
-      </Link>
+      </a>
     </div>
   );
 };

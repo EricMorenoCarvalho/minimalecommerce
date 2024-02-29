@@ -93,7 +93,7 @@ export const PRODUCTSLIST = [
     weight: "25 kg",
     material: "Aluminium Frame with Tempered Glass Top",
     productImgs: [img5, img5_1],
-    description: "Stylish Aluminium Garden Table, 152 cm x 91 cm x 76 cm, extends to 183 cm. Ideal for outdoor dining, durable in all weather."
+    description: "Stylish Aluminium Garden Table. Ideal for outdoor dining, durable in all weather."
   },
   {
     id: 6,

@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../components/header.css';
 
 const Header = () => {
   return (
     <header>
       <div className='headercontent'>
-        <Link to="/" className="title logo">E-Commerce</Link>
+        <a href="/" className="title logo">E-Commerce</a>
         <div className='header-links'>
-          <Link to="/" className='text underline'>Home</Link>
-          <Link to="/products" className='text underline'>Products</Link>
-          <Link to="/" className='cart-link'>
+          <a href="/" className='text underline'>Home</a>
+          <a href="/products" className='text underline'>Products</a>
+          <a href="/" className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -28,7 +27,7 @@ const Header = () => {
               <path d="M17 17h-11v-14h-2"></path>
               <path d="M6 5l14 1l-1 7h-13"></path>
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </header>

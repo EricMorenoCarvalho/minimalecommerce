@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PRODUCTSLIST } from '../components/productslist';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -38,29 +38,36 @@ const ProductDetail = () => {
 
   return (
     <div className='productdetail'>
-      <Slider {...sliderSettings} className='productdetailslider'>
+      <div className='productdetailslider'>
+      <Slider {...sliderSettings} className=''>
         {product.productImgs.map((img, index) => (
           <div key={index}>
             <img alt={product.productName} src={img} className='productimages1' />
           </div>
         ))}
       </Slider>
+      <div className='photo-count'>{currentSlide + 1} of {product.productImgs.length}</div>
+      </div>
+      
+
       <div className='productdetailtext'>
         <span className='title-xl'>{product.productName}</span>
         <p className='title'>${product.price}</p>
         <p className='text'>{product.description}</p>
         <div className='details-container'>
-          <span className='text'>Material: {product.material}</span>
-          <span className='text'>Weight: {product.weight}</span>
-          <span className='text'>Dimensions: {product.dimensions}</span>
+          <span className='text-small'>Material: {product.material}</span>
+          <span className='text-small'>Weight: {product.weight}</span>
+          <span className='text-small'>Dimensions: {product.dimensions}</span>
         </div>
-        <p className='text'>Category: <Link className="black-text td-none underline" to={`/products/${product.category}`}>{product.category}</Link></p>
-          <div className='button-container'>
-            <button onClick={handleDecreaseQuantity}>-</button>
-            <text className='text'>{quantity}</text>
-            <button onClick={handleIncreaseQuantity}>+</button>
-          <button className='button title'>Buy</button>
-          <button className='button title'> Add to cart</button>
+        <p className='text'>Category: <a className="black-text td-none underline" href={`/products/${product.category}`}>{product.category}</a></p>
+        <div className='button-container'>
+          <text className="text button" onClick={handleDecreaseQuantity}>-</text>
+          <text className='text text-nohover'>{quantity}</text>
+          <text className="text button" onClick={handleIncreaseQuantity}>+</text>
+        </div>
+        <div className='buycart-buttons'>
+          <text className='button title'>Buy</text>
+          <button className='button title bg-white'> Add to cart</button>
         </div>
       </div>
     </div>
