@@ -8,11 +8,11 @@ import Footer from '../components/footer';
 const ProductDetailPage = () => {
   return (
     <div>
-      <Header/>
-      <ProductDetail/>
-      <ProductCarousel/>
-      <Newsletter/>
-      <Footer/>
+      <Header />
+      <ProductDetail />
+      <ProductCarousel />
+      <Newsletter />
+      <Footer />
     </div>
   );
 };

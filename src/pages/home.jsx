@@ -12,15 +12,15 @@ const Home = () => {
 
   return (
     <div>
-      <Header/>
+      <Header />
       <div className='maincontent'>
-        <Maingrid/>
-        <Ourproducts/>
-        <ShopNow/>
-        <ProductCarousel/>
-        <Newsletter/>
+        <Maingrid />
+        <Ourproducts />
+        <ShopNow />
+        <ProductCarousel />
+        <Newsletter />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

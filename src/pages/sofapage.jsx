@@ -6,17 +6,17 @@ import SofasProducts from '../components/categories/sofasproducts';
 import SofasMain from '../components/categories/sofasmain';
 
 const ChairPage = () => {
-    return (
-        <div>
-          <Header />
-          <div className='maincontent'>
-            <SofasMain />
-            <SofasProducts />
-            <Newsletter />
-          </div>
-          <Footer />
-        </div>
-      );
-    };
+  return (
+    <div>
+      <Header />
+      <div className='maincontent'>
+        <SofasMain />
+        <SofasProducts />
+        <Newsletter />
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
 export default ChairPage;

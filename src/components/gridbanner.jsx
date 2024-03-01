@@ -12,33 +12,42 @@ const GridBanner = () => {
       <div className='image-container1'>
         <a href={"/products"}>
           <img alt='photo1' src={main1} className='photo1' />
-          <p className='image-text text underline'>Everything</p>
+          <p className='image-text text underline'>
+            Everything
+          </p>
         </a>
       </div>
       <div className='image-container2'>
         <a href={"/products/chairs"}>
           <img alt='photo2' src={main2} className='photo2' />
-          <p className='image-text text underline'>Chairs</p>
+          <p className='image-text text underline'>
+            Chairs
+          </p>
         </a>
       </div>
       <div className='image-container3'>
         <a href={"products/tables"}>
           <img alt='photo3' src={main3} className='photo3' />
-          <p className='image-text text underline'>Tables</p>
+          <p className='image-text text underline'>
+            Tables
+          </p>
         </a>
       </div>
       <div className='image-container4'>
         <a href={"products/sofas"}>
           <img alt='photo4' src={main4} className='photo4' />
-          <p className='image-text text underline'>Sofas</p>
+          <p className='image-text text underline'>
+            Sofas
+          </p>
         </a>
       </div>
       <div className='image-container5'>
         <a href={"products/lamps"}>
           <img alt='photo5' src={main5} className='photo5' />
-          <p className='image-text text underline'>Lamps</p>
+          <p className='image-text text underline'>
+            Lamps
+          </p>
         </a>
-        
       </div>
     </div>
   );

@@ -19,12 +19,15 @@ const OurProductsProductsPage = () => {
         {allProducts.map(product => (
           <a key={product.id} href={`/products/${product.id}`} className='mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
-            <p className='text nowrap underline'>{product.productName}</p>
-            <p className='text-small'>${product.price}</p>
+            <p className='text nowrap underline'>
+              {product.productName}
+            </p>
+            <p className='text-small'>
+              ${product.price}
+            </p>
           </a>
         ))}
       </div>
-
     </div>
   );
 };

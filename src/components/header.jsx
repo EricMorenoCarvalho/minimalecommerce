@@ -5,10 +5,16 @@ const Header = () => {
   return (
     <header>
       <div className='headercontent'>
-        <a href="/" className="title logo">E-Commerce</a>
+        <a href="/" className="title logo">
+          E-Commerce
+        </a>
         <div className='header-links'>
-          <a href="/" className='text underline'>Home</a>
-          <a href="/products" className='text underline'>Products</a>
+          <a href="/" className='text underline'>
+            Home
+          </a>
+          <a href="/products" className='text underline'>
+            Products
+          </a>
           <a href="/" className='cart-link'>
             <svg
               xmlns="http://www.w3.org/2000/svg"

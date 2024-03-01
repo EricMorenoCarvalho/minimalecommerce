@@ -11,7 +11,7 @@ const LampsMain = () => {
             <p className='title'>
                 Explore Our Exquisite Lamp Collection
             </p>
-            <CategoriesButtons/>
+            <CategoriesButtons />
         </div>
     );
 };

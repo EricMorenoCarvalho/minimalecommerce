@@ -6,17 +6,17 @@ import LampsProducts from '../components/categories/lampsproducts';
 import LampsMain from '../components/categories/lampsmain';
 
 const LampPage = () => {
-    return (
-        <div>
-          <Header />
-          <div className='maincontent'>
-            <LampsMain />
-            <LampsProducts />
-            <Newsletter />
-          </div>
-          <Footer />
-        </div>
-      );
-    };
+  return (
+    <div>
+      <Header />
+      <div className='maincontent'>
+        <LampsMain />
+        <LampsProducts />
+        <Newsletter />
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
 export default LampPage;

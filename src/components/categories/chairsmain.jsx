@@ -11,7 +11,7 @@ const ChairsMain = () => {
             <p className='title'>
                 Unveil Our Elegant Chair Selection
             </p>
-            <CategoriesButtons/>
+            <CategoriesButtons />
         </div>
     );
 };
