@@ -1,0 +1,25 @@
+.cartcomponentmain {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+    transition: 0.4s;
+  }
+
+  .close-cart{
+    position: relative;
+    margin-top: 2.3rem;
+    margin-right: 1.7rem;
+  }
+
+  @media (max-width: 1000px) {
+    .cartcomponentmain{
+      width: 100%;
+    }
+  }

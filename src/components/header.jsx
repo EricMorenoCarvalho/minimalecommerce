@@ -1,7 +1,7 @@
 import React from 'react';
 import '../components/header.css';
 
-const Header = () => {
+const Header = ({ toggleCarrito }) => {
   return (
     <header>
       <div className='headercontent'>
@@ -15,7 +15,7 @@ const Header = () => {
           <a href="/products" className='text underline'>
             Products
           </a>
-          <a href="/" className='cart-link'>
+          <span className='cart-link' onClick={toggleCarrito}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -33,7 +33,7 @@ const Header = () => {
               <path d="M17 17h-11v-14h-2"></path>
               <path d="M6 5l14 1l-1 7h-13"></path>
             </svg>
-          </a>
+          </span>
         </div>
       </div>
     </header>

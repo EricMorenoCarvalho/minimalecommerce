@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PRODUCTSLIST } from './productslist';
-import './ProductCarousel.css';
+import './productcarousel.css';
 
 const ProductCarousel = () => {
   const [allProducts, setAllProducts] = useState([]);
