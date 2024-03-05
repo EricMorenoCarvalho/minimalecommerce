@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.more-products{
+  margin-left: 2rem;
+}
+
 .custom-gridproducts {
   display: flex;
   overflow-x: auto;

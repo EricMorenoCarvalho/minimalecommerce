@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
-import { PRODUCTSLIST } from '../components/productslist';
-import { useParams } from 'react-router-dom';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import '../components/productdetail.css';
+import React, { useState } from 'react'
+import { PRODUCTSLIST } from '../components/productslist'
+import QuantitySelector from './quantityselector'
+import { useParams } from 'react-router-dom'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import '../components/productdetail.css'
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const product = PRODUCTSLIST.find((p) => p.id === parseInt(productId));
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [quantity, setQuantity] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [quantity, setQuantity] = useState(1)
 
   const handleIncreaseQuantity = () => {
-    setQuantity(quantity + 1);
+    setQuantity(quantity + 1)
   };
 
   const handleDecreaseQuantity = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity(quantity - 1)
     }
-  };
+  }
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <div>Product not found</div>
   }
 
   const sliderSettings = {
@@ -74,22 +75,16 @@ const ProductDetail = () => {
           </span>
         </div>
         <p className='text'>
-          Category:
+          Category: <b/>
           <a className="black-text td-none underline" href={`/products/${product.category}`}>
             {product.category}
           </a>
         </p>
-        <div className='button-container'>
-          <text className="text button" onClick={handleDecreaseQuantity}>
-            -
-          </text>
-          <text className='text text-nohover'>
-            {quantity}
-          </text>
-          <text className="text button" onClick={handleIncreaseQuantity}>
-            +
-          </text>
-        </div>
+        <QuantitySelector
+          quantity={quantity}
+          onIncrease={handleIncreaseQuantity}
+          onDecrease={handleDecreaseQuantity}
+        />
         <div className='buycart-buttons'>
           <text className='button title'>
             Buy

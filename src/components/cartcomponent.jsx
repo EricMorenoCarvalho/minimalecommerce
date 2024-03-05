@@ -1,18 +1,31 @@
-// CartComponent.js
-import React from 'react';
-import './cartcomponent.css';
+import React from 'react'
+import './cartcomponent.css'
+import CartProduct from './cartproduct'
 
-const CartComponent = ({ onClose }) => {
+const CartComponent = ({ isOpen, onClose }) => {
+  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`
+
   return (
-    <div className='cartcomponentmain'>
-      <img
-        className="close-cart"
-        onClick={onClose}
-        alt="close"
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAi0lEQVR4nO3VMQ6AIAyF4f9ib9E7qVdWD6ExOhgTpLTg5FuY6BdCC/AnkAHoIgU49x91khEwA70TELBY9nshWQEvpFKgFJIXsEKKAjlItYAUpNrAvf9XYLrW6DwlMwLbtTZJ1/okzztQ8GXIAtSGcl2kKGRtU3mh0jlQKeQdNFmh6CTLAn3yM/7hLTtHBjH8yNmtagAAAABJRU5ErkJggg=="
-      />
+    <div className={cartClasses}>
+      <div className="close-cart" onClick={onClose}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+      <CartProduct />
     </div>
   );
 };
 
-export default CartComponent;
+export default CartComponent

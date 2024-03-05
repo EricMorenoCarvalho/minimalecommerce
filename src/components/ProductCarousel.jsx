@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { PRODUCTSLIST } from './productslist';
-import './productcarousel.css';
+import React, { useState, useEffect, useRef } from 'react'
+import { PRODUCTSLIST } from './productslist'
+import './productcarousel.css'
 
 const ProductCarousel = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState(10);
   const productContainerRef = useRef();
 
-  const getAllProducts = () => {
+  const getProducts = () => {
     const shuffledProducts = PRODUCTSLIST.sort(() => 0.5 - Math.random());
     setAllProducts(shuffledProducts);
   };
 
   useEffect(() => {
-    getAllProducts();
+    getProducts();
   }, []);
 
   return (

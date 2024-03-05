@@ -20,24 +20,24 @@ function App() {
   };
 
   const toggleClose = () => {
-    setMostrarCarrito(false);
+    setMostrarCarrito(!mostrarCarrito);
   };
 
   return (
     <Router>
-        <Header toggleCarrito={toggleCarrito} />
-        {mostrarCarrito && <CartComponent onClose={toggleClose}/>}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products/*" element={<ProductsPage />} />
-          <Route path="/products/:productId" element={<ProductDetailPage />} />
-          <Route path="/products/chairs" element={<ChairPage />} />
-          <Route path="/products/tables" element={<TablePage />} />
-          <Route path="/products/sofas" element={<SofaPage />} />
-          <Route path="/products/lamps" element={<LampPage />} />
-        </Routes>
-        <Newsletter/>
-        <Footer />
+      <Header toggleCarrito={toggleCarrito} mostrarCarrito={mostrarCarrito} />
+      <CartComponent isOpen={mostrarCarrito} onClose={toggleClose} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products/*" element={<ProductsPage />} />
+        <Route path="/products/:productId" element={<ProductDetailPage />} />
+        <Route path="/products/chairs" element={<ChairPage />} />
+        <Route path="/products/tables" element={<TablePage />} />
+        <Route path="/products/sofas" element={<SofaPage />} />
+        <Route path="/products/lamps" element={<LampPage />} />
+      </Routes>
+      <Newsletter />
+      <Footer />
     </Router>
   );
 }

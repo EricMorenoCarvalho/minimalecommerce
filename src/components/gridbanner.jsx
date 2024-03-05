@@ -1,10 +1,10 @@
-import React from 'react';
-import main1 from '../images/main1.jpg';
-import main2 from '../images/main2.jpg';
-import main3 from '../images/main3.jpg';
-import main4 from '../images/main4.jpg';
-import main5 from '../images/main5.jpeg';
-import './gridbanner.css';
+import React from 'react'
+import main1 from '../images/main1.jpg'
+import main2 from '../images/main2.jpg'
+import main3 from '../images/main3.jpg'
+import main4 from '../images/main4.jpg'
+import main5 from '../images/main5.jpeg'
+import './gridbanner.css'
 
 const GridBanner = () => {
   return (

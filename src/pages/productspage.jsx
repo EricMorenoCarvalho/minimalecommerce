@@ -1,13 +1,15 @@
 import React from 'react';
 import '../components/productsmain.css';
+import Products from '../components/products';
 import ProductsMain from '../components/productsmain';
-import OurProductsProductsPage from '../components/ourproducts_productspage';
 
 const ProductsPage = () => {
   return (
       <div className='maincontent'>
+        <div className='ourproducts'>
         <ProductsMain />
-        <OurProductsProductsPage />
+        <Products />
+        </div>
       </div>
   );
 };
