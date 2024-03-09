@@ -1,11 +1,21 @@
 import React from 'react'
+import './cartcomponent.css'
 
 function Checkout() {
     return (
-        <div>
-            checkout
+        <div className='checkout'>
+            <div className='cartleft text'>
+                <span>
+                    Subtotal
+                </span>
+            </div>
+            <div className='cartright text'>
+                <button className='button text bg-white'>
+                    Add to cart
+                </button>
+            </div>
         </div>
     )
 }
 
-export default checkout
+export default Checkout

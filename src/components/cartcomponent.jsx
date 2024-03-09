@@ -1,6 +1,7 @@
 import React from 'react'
 import './cartcomponent.css'
 import CartProduct from './cartproduct'
+import Checkout from './checkout';
 
 const CartComponent = ({ isOpen, onClose }) => {
   const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`
@@ -24,6 +25,7 @@ const CartComponent = ({ isOpen, onClose }) => {
         </svg>
       </div>
       <CartProduct />
+      <Checkout />
     </div>
   );
 };
