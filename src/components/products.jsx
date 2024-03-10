@@ -1,32 +1,57 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { PRODUCTSLIST } from './productslist';
 
-const Products = ({limit}) => {
-    const [allProducts, setAllProducts] = useState([]);
+const Products = ({ limit }) => {
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const location = useLocation();
 
-    const getAllProducts = () => {
-      const shuffledProducts = PRODUCTSLIST.sort(() => 0.5 - Math.random());
-      setAllProducts(shuffledProducts);
-    };
+  useEffect(() => {
+    const currentCategory = location.pathname.split('/')[2];
 
-    useEffect(() => {
-        getAllProducts();
-      }, []);
+    if (currentCategory) {
+      setSelectedCategory(currentCategory);
+      getFilteredProducts(currentCategory);
+    } else {
+      getAllProducts();
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (selectedCategory !== 'All') {
+      getFilteredProducts(selectedCategory);
+    } else {
+      getAllProducts();
+    }
+  }, [selectedCategory]);
+
+  const getAllProducts = () => {
+    const shuffledProducts = PRODUCTSLIST.sort(() => 0.5 - Math.random());
+    setFilteredProducts(shuffledProducts);
+  };
+
+  const getFilteredProducts = (category) => {
+    const lowerCaseCategory = category.toLowerCase();
+    const filteredProducts = PRODUCTSLIST.filter(product => product.category.toLowerCase() === lowerCaseCategory);
+    const shuffledProducts = filteredProducts.sort(() => 0.5 - Math.random());
+    setFilteredProducts(shuffledProducts);
+  };
 
   return (
     <div className='gridproducts'>
-    {allProducts.slice(0, limit).map(product => (
-      <a key={product.id} href={`/products/${product.id}`} className='mainproducts'>
-        <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
-        <p className='text nowrap underline'>
-          {product.productName}
-        </p>
-        <p className='text-small'>
-          ${product.price}
-        </p>
-      </a>
-    ))}
-  </div>
+      {filteredProducts.slice(0, limit).map(product => (
+        <a key={product.id} href={`/products/${product.id}`} className='mainproducts'>
+          <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
+          <p className='text nowrap underline'>
+            {product.productName}
+          </p>
+          <p className='text-small'>
+            ${product.price}
+          </p>
+        </a>
+      ))}
+    </div>
   );
 };
 

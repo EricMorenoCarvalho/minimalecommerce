@@ -1,10 +1,10 @@
-import React from 'react'
-import main1 from '../images/main1.jpg'
-import main2 from '../images/main2.jpg'
-import main3 from '../images/main3.jpg'
-import main4 from '../images/main4.jpg'
-import main5 from '../images/main5.jpeg'
-import './gridbanner.css'
+import React from 'react';
+import main1 from '../images/main1.jpg';
+import main2 from '../images/main2.jpg';
+import main3 from '../images/main3.jpg';
+import main4 from '../images/main4.jpg';
+import main5 from '../images/main5.jpeg';
+import './gridbanner.css';
 
 const GridBanner = () => {
   return (
@@ -26,7 +26,7 @@ const GridBanner = () => {
         </a>
       </div>
       <div className='image-container3'>
-        <a href={"products/tables"}>
+        <a href={"/products/tables"}>
           <img alt='photo3' src={main3} className='photo3' />
           <p className='image-text text underline'>
             Tables
@@ -34,7 +34,7 @@ const GridBanner = () => {
         </a>
       </div>
       <div className='image-container4'>
-        <a href={"products/sofas"}>
+        <a href={"/products/sofas"}>
           <img alt='photo4' src={main4} className='photo4' />
           <p className='image-text text underline'>
             Sofas
@@ -42,7 +42,7 @@ const GridBanner = () => {
         </a>
       </div>
       <div className='image-container5'>
-        <a href={"products/lamps"}>
+        <a href={"/products/lamps"}>
           <img alt='photo5' src={main5} className='photo5' />
           <p className='image-text text underline'>
             Lamps

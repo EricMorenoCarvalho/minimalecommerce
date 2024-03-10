@@ -7,12 +7,12 @@ const OurProducts = () => {
   return (
     <div className='ourproducts'>
       <p className='title'>Our products</p>
-      <Products limit={8}/>
-        <a href={"/products"}>
-          <text className="button text-small button-seemore">
-            See More
-          </text>
-        </a>
+      <Products limit={8} />
+      <a href={"/products"}>
+        <text className="button text-small button-seemore">
+          See More
+        </text>
+      </a>
     </div>
   );
 };
