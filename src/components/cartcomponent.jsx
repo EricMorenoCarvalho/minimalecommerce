@@ -1,10 +1,10 @@
-import React from 'react'
-import './cartcomponent.css'
-import CartProduct from './cartproduct'
+import React from 'react';
+import './cartcomponent.css';
+import CartProduct from './cartproduct';
 import Checkout from './checkout';
 
-const CartComponent = ({ isOpen, onClose }) => {
-  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`
+const CartComponent = ({ isOpen, onClose, cart }) => {
+  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`;
 
   return (
     <div className={cartClasses}>
@@ -24,10 +24,13 @@ const CartComponent = ({ isOpen, onClose }) => {
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </div>
-      <CartProduct />
+      <span className='title carttitle'>Your Shopping Cart ({cart.length})</span>
+      {cart.map((item) => (
+        <CartProduct key={item.id} product={item} />
+      ))}
       <Checkout />
     </div>
   );
 };
 
-export default CartComponent
+export default CartComponent;

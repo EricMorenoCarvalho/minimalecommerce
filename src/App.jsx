@@ -10,6 +10,7 @@ import Newsletter from './components/newsletter';
 
 function App() {
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const toggleCarrito = () => {
     setMostrarCarrito(!mostrarCarrito);
@@ -22,12 +23,15 @@ function App() {
   return (
     <Router>
       <Header toggleCarrito={toggleCarrito} mostrarCarrito={mostrarCarrito} />
-      <CartComponent isOpen={mostrarCarrito} onClose={toggleClose} />
+      <CartComponent isOpen={mostrarCarrito} onClose={toggleClose} cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/*" element={<ProductsPage />} />
         <Route path="/products/:category" element={<ProductsPage />} />
-        <Route path="/products/:productId" element={<ProductDetailPage />} />
+        <Route
+          path="/product/:productId"
+          element={<ProductDetailPage setCart={setCart} cart={cart} />}
+        />
       </Routes>
       <Newsletter />
       <Footer />

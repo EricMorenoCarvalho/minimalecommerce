@@ -1,31 +1,44 @@
-import React, { useState } from 'react'
-import { PRODUCTSLIST } from '../components/productslist'
-import QuantitySelector from './quantityselector'
-import { useParams } from 'react-router-dom'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import '../components/productdetail.css'
+import React, { useState } from 'react';
+import { PRODUCTSLIST } from '../components/productslist';
+import QuantitySelector from './quantityselector';
+import { useParams } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import '../components/productdetail.css';
 
-const ProductDetail = () => {
+const ProductDetail = ({ setCart, cart }) => {
   const { productId } = useParams();
   const product = PRODUCTSLIST.find((p) => p.id === parseInt(productId));
 
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [quantity, setQuantity] = useState(1)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const handleIncreaseQuantity = () => {
-    setQuantity(quantity + 1)
+    setQuantity(quantity + 1);
   };
 
   const handleDecreaseQuantity = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1)
+      setQuantity(quantity - 1);
     }
-  }
+  };
+
+  const handleAddToCart = () => {
+    const itemInCart = cart.find((item) => item.id === product.id);
+
+    if (itemInCart) {
+      const updatedCart = cart.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
+      );
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...product, quantity }]);
+    }
+  };
 
   if (!product) {
-    return <div>Product not found</div>
+    return <div>Product not found</div>;
   }
 
   const sliderSettings = {
@@ -52,31 +65,18 @@ const ProductDetail = () => {
         </div>
       </div>
 
-
       <div className='productdetailtext'>
-        <span className='title-xl'>
-          {product.productName}
-        </span>
-        <p className='title'>
-          ${product.price}
-        </p>
-        <p className='text'>
-          {product.description}
-        </p>
+        <span className='title-xl'>{product.productName}</span>
+        <p className='title'>${product.price}</p>
+        <p className='text'>{product.description}</p>
         <div className='details-container'>
-          <span className='text-small'>
-            Material: {product.material}
-          </span>
-          <span className='text-small'>
-            Weight: {product.weight}
-          </span>
-          <span className='text-small'>
-            Dimensions: {product.dimensions}
-          </span>
+          <span className='text-small'>Material: {product.material}</span>
+          <span className='text-small'>Weight: {product.weight}</span>
+          <span className='text-small'>Dimensions: {product.dimensions}</span>
         </div>
         <p className='text'>
-          Category: <b/>
-          <a className="black-text td-none underline" href={`/products/${product.category}`}>
+          Category: <b />
+          <a className='black-text td-none underline' href={`/products/${product.category}`}>
             {product.category}
           </a>
         </p>
@@ -89,13 +89,13 @@ const ProductDetail = () => {
           <text className='button title'>
             Buy
           </text>
-          <button className='button title bg-white'>
+          <button className='button title bg-white' onClick={handleAddToCart}>
             Add to cart
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default ProductDetail
+export default ProductDetail;

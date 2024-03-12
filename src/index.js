@@ -2,7 +2,7 @@ import React from 'react';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/ubuntu';
 import './components/general.css';
-import App from './App.js';
+import App from './App';
 import ReactDOM from 'react-dom/client';
 
 

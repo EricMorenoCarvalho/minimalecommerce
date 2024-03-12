@@ -41,7 +41,7 @@ const Products = ({ limit }) => {
   return (
     <div className='gridproducts'>
       {filteredProducts.slice(0, limit).map(product => (
-        <a key={product.id} href={`/products/${product.id}`} className='mainproducts'>
+        <a key={product.id} href={`/product/${product.id}`} className='mainproducts'>
           <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
           <p className='text nowrap underline'>
             {product.productName}

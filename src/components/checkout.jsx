@@ -11,7 +11,7 @@ function Checkout() {
             </div>
             <div className='cartright text'>
                 <button className='button text bg-white'>
-                    Add to cart
+                    Go to checkout
                 </button>
             </div>
         </div>
