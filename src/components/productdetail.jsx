@@ -50,6 +50,9 @@ const ProductDetail = ({ setCart, cart }) => {
     afterChange: (current) => setCurrentSlide(current),
   };
 
+  const multipliedPrice = (product.price * quantity).toFixed(2);
+
+
   return (
     <div className='productdetail'>
       <div className='productdetailslider'>
@@ -67,7 +70,7 @@ const ProductDetail = ({ setCart, cart }) => {
 
       <div className='productdetailtext'>
         <span className='title-xl'>{product.productName}</span>
-        <p className='title'>${product.price}</p>
+        <p className='title'>${multipliedPrice}</p>
         <p className='text'>{product.description}</p>
         <div className='details-container'>
           <span className='text-small'>Material: {product.material}</span>

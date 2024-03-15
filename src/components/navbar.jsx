@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/header.css'
+import '../components/navbar.css'
 
 const Header = ({ toggleCarrito }) => {
   return (

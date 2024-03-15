@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import QuantitySelector from './quantityselector';
 
-const CartProduct = ({ product }) => {
+const CartProduct = ({ product, onDelete }) => {
+    const [quantity, setQuantity] = useState(product.quantity);
+
+    const handleIncreaseQuantity = () => {
+        setQuantity(quantity + 1);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
+
+    const handleDeleteProduct = () => {
+        onDelete(product.id);
+    };
+
     return (
         <div className='productcart'>
             <img src={product.productImgs[0]} alt="productimage" className='cartproductimages' />
             <span className='title cartproductname'>{product.productName}</span>
-            <QuantitySelector quantity={product.quantity} />
-            <div>
+            <QuantitySelector
+                quantity={quantity}
+                onIncrease={handleIncreaseQuantity}
+                onDecrease={handleDecreaseQuantity}
+            />
+            <div onClick={handleDeleteProduct}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

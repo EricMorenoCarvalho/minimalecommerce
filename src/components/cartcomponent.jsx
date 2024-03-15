@@ -3,9 +3,14 @@ import './cartcomponent.css';
 import CartProduct from './cartproduct';
 import Checkout from './checkout';
 
-const CartComponent = ({ isOpen, onClose, cart }) => {
-  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`;
+const CartComponent = ({ isOpen, onClose, cart, setCart }) => {
+  const handleDeleteProduct = (productId) => {
+    const updatedCart = cart.filter(item => item.id !== productId);
+    setCart(updatedCart);
+  };
 
+  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`;
+  
   return (
     <div className={cartClasses}>
       <div className="close-cart" onClick={onClose}>
@@ -26,7 +31,7 @@ const CartComponent = ({ isOpen, onClose, cart }) => {
       </div>
       <span className='title carttitle'>Your Shopping Cart ({cart.length})</span>
       {cart.map((item) => (
-        <CartProduct key={item.id} product={item} />
+        <CartProduct key={item.id} product={item} onDelete={() => handleDeleteProduct(item.id)} />
       ))}
       <Checkout />
     </div>
