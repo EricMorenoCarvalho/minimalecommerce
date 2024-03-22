@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { PRODUCTSLIST } from './productslist';
 
 const Products = ({ limit }) => {
@@ -41,7 +41,7 @@ const Products = ({ limit }) => {
   return (
     <div className='gridproducts'>
       {filteredProducts.slice(0, limit).map(product => (
-        <a key={product.id} href={`/product/${product.id}`} className='mainproducts'>
+        <Link key={product.id} to={`/product/${product.id}`} className='mainproducts'>
           <img alt={product.productName} src={product.productImgs[0]} className='productimages' />
           <p className='text nowrap underline'>
             {product.productName}
@@ -49,7 +49,7 @@ const Products = ({ limit }) => {
           <p className='text-small'>
             ${product.price}
           </p>
-        </a>
+        </Link>
       ))}
     </div>
   );

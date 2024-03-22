@@ -1,26 +1,31 @@
-import React from 'react'
-import '../components/navbar.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = ({ toggleCarrito }) => {
+const Header = ({ toggleCarrito, cartItemCount }) => {
   return (
     <header>
       <div className="headercontent">
-        <a href="/" className="title logo">
+        <Link to="/" className="title logo">
           E-Commerce
-        </a>
+        </Link>
         <div className="header-links">
-          <a href="/" className="text underline">
+          <Link to="/" className="text underline">
             Home
-          </a>
-          <a href="/products" className="text underline">
+          </Link>
+          <Link to="/products" className="text underline">
             Products
-          </a>
-          <div className="cart-container">
-            <div className="cart" onClick={toggleCarrito}>
+          </Link>
+          <div className="cart-container" onClick={toggleCarrito}>
+            {cartItemCount > 0 && (
+              <span className="cart-notification">
+                {cartItemCount}
+              </span>
+            )}
+            <div className="cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="27"
+                height="27"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

@@ -8,16 +8,16 @@ const QuantitySelector = ({ quantity, onIncrease, onDecrease }) => {
     const handleDecreaseQuantity = () => {
         onDecrease();
     };
-
+    
     return (
         <div className='button-container'>
-            <span className="title quantitybuttonwidth" onClick={handleDecreaseQuantity}>
+            <span className="text quantitybuttonwidth" onClick={handleDecreaseQuantity}>
                 -
             </span>
-            <span className='title quantitybuttonwidth'>
+            <span className='text quantitybuttonwidth'>
                 {quantity}
             </span>
-            <span className="title quantitybuttonwidth" onClick={handleIncreaseQuantity}>
+            <span className="text quantitybuttonwidth" onClick={handleIncreaseQuantity}>
                 +
             </span>
         </div>

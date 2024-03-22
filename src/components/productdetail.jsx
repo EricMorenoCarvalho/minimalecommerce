@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { PRODUCTSLIST } from '../components/productslist';
-import QuantitySelector from './quantityselector';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import QuantitySelector from './quantityselector';
+import { PRODUCTSLIST } from '../components/productslist';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../components/productdetail.css';
+import '../components/productdetailpage.css';
 
 const ProductDetail = ({ setCart, cart }) => {
   const { productId } = useParams();
@@ -13,6 +13,10 @@ const ProductDetail = ({ setCart, cart }) => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    setQuantity(1);
+  }, [productId]);
 
   const handleIncreaseQuantity = () => {
     setQuantity(quantity + 1);
@@ -51,7 +55,6 @@ const ProductDetail = ({ setCart, cart }) => {
   };
 
   const multipliedPrice = (product.price * quantity).toFixed(2);
-
 
   return (
     <div className='productdetail'>

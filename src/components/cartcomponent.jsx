@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './cartcomponent.css';
 import CartProduct from './cartproduct';
-import Checkout from './checkout';
 
-const CartComponent = ({ isOpen, onClose, cart, setCart }) => {
-  const handleDeleteProduct = (productId) => {
-    const updatedCart = cart.filter(item => item.id !== productId);
+const CartComponent = ({ isOpen, onClose, cart, onRemoveFromCart, setCart }) => {
+  const cartRef = useRef(null);
+  const [subtotal, setSubtotal] = useState(0);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
+
+  useEffect(() => {
+    const newSubtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    setSubtotal(newSubtotal);
+  }, [cart]);
+
+  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`;
+
+  const updateQuantity = (productId, newQuantity) => {
+    const updatedCart = cart.map((item) =>
+      item.id === productId ? { ...item, quantity: newQuantity } : item
+    );
     setCart(updatedCart);
   };
 
-  const cartClasses = `cartcomponentmain ${isOpen ? 'slide-in' : 'slide-out'}`;
-  
   return (
-    <div className={cartClasses}>
+    <div ref={cartRef} className={cartClasses}>
       <div className="close-cart" onClick={onClose}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,10 +57,19 @@ const CartComponent = ({ isOpen, onClose, cart, setCart }) => {
         </svg>
       </div>
       <span className='title carttitle'>Your Shopping Cart ({cart.length})</span>
-      {cart.map((item) => (
-        <CartProduct key={item.id} product={item} onDelete={() => handleDeleteProduct(item.id)} />
-      ))}
-      <Checkout />
+      <div className='cart-products'>
+        {cart.map((item) => (
+          <CartProduct key={item.id} product={item} onDelete={onRemoveFromCart} updateQuantity={updateQuantity} />
+        ))}
+      </div>
+      <div className='checkout'>
+        <span className='title mg-b1'>
+          Subtotal: ${subtotal.toFixed(2)}
+        </span>
+        <button className='button title bg-white checkoutbutton'>
+          Go to checkout
+        </button>
+      </div>
     </div>
   );
 };

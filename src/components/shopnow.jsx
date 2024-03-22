@@ -1,6 +1,6 @@
-import React from 'react'
-import imgshopnow from '../images/shopnow.jpg'
-import './shopnow.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import imgshopnow from '../images/shopnow.jpg';
 
 const ShopNow = () => {
   return (
@@ -12,9 +12,9 @@ const ShopNow = () => {
         <p className='text-xs'>
           Discover stylish furniture to elevate your home. Explore our collection for on-trend pieces that redefine your space.
         </p>
-        <a href={"/products"} className="button text-small">
+        <Link to="/products" className="button text-small">
           Shop Now
-        </a>
+        </Link>
       </div>
       <img alt='shopnow' src={imgshopnow} className='image-shopnow' />
     </div>

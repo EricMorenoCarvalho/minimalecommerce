@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import QuantitySelector from './quantityselector';
 
-const CartProduct = ({ product, onDelete }) => {
+const CartProduct = ({ product, onDelete, updateQuantity }) => {
     const [quantity, setQuantity] = useState(product.quantity);
 
     const handleIncreaseQuantity = () => {
-        setQuantity(quantity + 1);
+        const newQuantity = quantity + 1;
+        setQuantity(newQuantity);
+        updateQuantity(product.id, newQuantity);
     };
 
     const handleDecreaseQuantity = () => {
         if (quantity > 1) {
-            setQuantity(quantity - 1);
+            const newQuantity = quantity - 1;
+            setQuantity(newQuantity);
+            updateQuantity(product.id, newQuantity);
         }
     };
 
@@ -21,14 +25,18 @@ const CartProduct = ({ product, onDelete }) => {
     return (
         <div className='productcart'>
             <img src={product.productImgs[0]} alt="productimage" className='cartproductimages' />
-            <span className='title cartproductname'>{product.productName}</span>
-            <QuantitySelector
-                quantity={quantity}
-                onIncrease={handleIncreaseQuantity}
-                onDecrease={handleDecreaseQuantity}
-            />
+            <div className='cart-middle'>
+                <span className='text-small cartproducttext product-name'>{product.productName}</span>
+                <QuantitySelector
+                    quantity={quantity}
+                    onIncrease={handleIncreaseQuantity}
+                    onDecrease={handleDecreaseQuantity}
+                />
+            </div>
+            <span className='text-small cartproducttext'>${product.price}</span>
             <div onClick={handleDeleteProduct}>
                 <svg
+                    className='delete-product'
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import '../components/productsmain.css';
+import '../components/productspage.css';
 import Products from '../components/products';
-import CategoriesButtons from '../components/categoriesbuttons';
+import { Link } from 'react-router-dom';
 
 const ProductsPage = () => {
   const location = useLocation();
@@ -21,12 +21,12 @@ const ProductsPage = () => {
     text2 = "Discover beautifully crafted tables for your living space";
   }
 
-  if(path.includes('products/sofas')) {
+  if (path.includes('products/sofas')) {
     text1 = "Luxurious Sofas for Your Home"
     text2 = "Indulge in comfort with our luxurious sofa collection"
   }
 
-  if(path.includes('products/lamps')) {
+  if (path.includes('products/lamps')) {
     text1 = "Illuminate Your Space with Stylish Lamps"
     text2 = "Add a touch of style with our curated lamp collection"
   }
@@ -40,7 +40,13 @@ const ProductsPage = () => {
         <p className='title'>
           {text2}
         </p>
-        <CategoriesButtons />
+        <div className='button-container'>
+          <Link className='button text-small' to='/products'>All</Link>
+          <Link className='button text-small' to='/products/chairs'>Chairs</Link>
+          <Link className='button text-small' to='/products/tables'>Tables</Link>
+          <Link className='button text-small' to='/products/sofas'>Sofas</Link>
+          <Link className='button text-small' to='/products/lamps'>Lamps</Link>
+        </div>
         <Products />
       </div>
     </div>

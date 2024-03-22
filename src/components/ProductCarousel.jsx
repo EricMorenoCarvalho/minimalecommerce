@@ -1,27 +1,26 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { PRODUCTSLIST } from './productslist'
-import './productcarousel.css'
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { PRODUCTSLIST } from './productslist';
 
 const ProductCarousel = () => {
   const [allProducts, setAllProducts] = useState([]);
-  const [visibleProducts, setVisibleProducts] = useState(10);
-  const productContainerRef = useRef();
-
-  const getProducts = () => {
-    const shuffledProducts = PRODUCTSLIST.sort(() => 0.5 - Math.random());
-    setAllProducts(shuffledProducts);
-  };
+  const location = useLocation();
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    const shuffleProducts = () => {
+      const shuffledProducts = [...PRODUCTSLIST].sort(() => 0.5 - Math.random());
+      setAllProducts(shuffledProducts);
+    };
+
+    shuffleProducts();
+  }, [location.pathname]);
 
   return (
     <div className='custom-ourproducts'>
-      <text className='title more-products'>More Products</text>
-      <div className='custom-gridproducts' ref={productContainerRef}>
-        {allProducts.slice(0, visibleProducts).map(product => (
-          <a key={product.id} href={`/product/${product.id}`} className='custom-mainproducts'>
+      <span className='title more-products'>More Products</span>
+      <div className='custom-gridproducts'>
+        {allProducts.slice(0, 10).map(product => (
+          <Link key={product.id} to={`/product/${product.id}`} className='custom-mainproducts'>
             <img alt={product.productName} src={product.productImgs[0]} className='productimages2' />
             <p className='text underline'>
               {product.productName}
@@ -29,7 +28,7 @@ const ProductCarousel = () => {
             <p className='text-small'>
               ${product.price}
             </p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

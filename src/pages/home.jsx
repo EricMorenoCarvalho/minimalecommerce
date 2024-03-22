@@ -1,18 +1,19 @@
 import React from 'react';
-import Maingrid from '../components/gridbanner';
-import Ourproducts from '../components/ourproducts';
-import ShopNow from '../components/shopnow';
 import ProductCarousel from '../components/productcarousel';
+import GridBanner from '../components/gridbanner';
+import OurProducts from '../components/ourproducts';
+import ShopNow from '../components/shopnow';
+import '../components/home.css';
 
 const Home = () => {
 
   return (
-      <div className='maincontent'>
-        <Maingrid />
-        <Ourproducts />
-        <ShopNow />
-        <ProductCarousel />
-      </div>
+    <div className='maincontent'>
+      <GridBanner />
+      <OurProducts />
+      <ShopNow />
+      <ProductCarousel />
+    </div>
   );
 }
 
