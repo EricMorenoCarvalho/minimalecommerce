@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCarousel from '../components/productcarousel';
+import ProductCarousel from '../components/carousel';
 import GridBanner from '../components/gridbanner';
 import OurProducts from '../components/ourproducts';
 import ShopNow from '../components/shopnow';
