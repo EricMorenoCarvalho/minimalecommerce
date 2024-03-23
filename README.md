@@ -42,10 +42,6 @@ To run the project locally, follow these steps:
     npm start
     ```
 
-## Contribution
-
-Contributions are welcome! If you wish to contribute to the project, please contact me, and I'll be happy to provide you with access to collaborate.
-
 ## Contact
 
 If you have any questions or suggestions regarding the project, feel free to contact me via email: [ericmorenowork@gmail.com](mailto:ericmorenowork@gmail.com).
