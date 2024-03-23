@@ -6,7 +6,7 @@ You can access to the live demo here: https://minimalecommerce.vercel.app/
 
 
 <div align-self='center'>
-<img src='https://ibb.co/h2wVJVX'/>
+<img src='https://i.ibb.co/RQdckch/minimalecommerce-vercel-app.png'/>
 </div>
 
 ## Technologies Used
