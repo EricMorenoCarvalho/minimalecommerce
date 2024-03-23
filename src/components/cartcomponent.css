@@ -32,6 +32,13 @@
   margin-right: .65rem;
 }
 
+hr.rounded {
+  width: 100%;
+  background-color: black;
+  border-top: 2px solid;
+  border-radius: 5px;
+}
+
 .checkout {
   position: absolute;
   bottom: 0;
