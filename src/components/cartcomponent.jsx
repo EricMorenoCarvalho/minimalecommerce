@@ -63,6 +63,7 @@ const CartComponent = ({ isOpen, onClose, cart, onRemoveFromCart, setCart }) => 
         ))}
       </div>
       <div className='checkout'>
+        <hr class="rounded" />
         <span className='title mg-b1'>
           Subtotal: ${subtotal.toFixed(2)}
         </span>
