@@ -62,15 +62,17 @@ const CartComponent = ({ isOpen, onClose, cart, onRemoveFromCart, setCart }) => 
           <CartProduct key={item.id} product={item} onDelete={onRemoveFromCart} updateQuantity={updateQuantity} />
         ))}
       </div>
-      <div className='checkout'>
-        <hr class="rounded" />
-        <span className='title mg-b1'>
-          Subtotal: ${subtotal.toFixed(2)}
-        </span>
-        <button className='button title bg-white checkoutbutton'>
-          Go to checkout
-        </button>
-      </div>
+      {isOpen && (
+        <div className='checkout'>
+          <hr class="rounded" />
+          <span className='title mg-b1'>
+            Subtotal: ${subtotal.toFixed(2)}
+          </span>
+          <button className='button title bg-white checkoutbutton'>
+            Go to checkout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
