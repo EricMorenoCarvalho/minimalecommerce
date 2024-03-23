@@ -62,6 +62,10 @@ hr.rounded {
   align-items: center;
 }
 
+.cart-empty {
+  height: 5rem;
+}
+
 .cartcomponentmain.slide-in {
   right: 0;
 }

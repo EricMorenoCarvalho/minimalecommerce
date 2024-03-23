@@ -61,6 +61,7 @@ const CartComponent = ({ isOpen, onClose, cart, onRemoveFromCart, setCart }) => 
         {cart.map((item) => (
           <CartProduct key={item.id} product={item} onDelete={onRemoveFromCart} updateQuantity={updateQuantity} />
         ))}
+        <div className='cart-empty' />
       </div>
       {isOpen && (
         <div className='checkout'>
