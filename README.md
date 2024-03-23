@@ -2,7 +2,12 @@
 
 This minimalist eCommerce project is designed to showcase skills in web development using React. Although I currently lack professional experience with this framework, this project reflects my ability to handle React and create functional and aesthetically appealing web applications.
 
-You can Acces to the live demo here: https://minimalecommerce.vercel.app/
+You can access to the live demo here: https://minimalecommerce.vercel.app/
+
+
+<div align-self='center'>
+<img src='https://ibb.co/h2wVJVX'/>
+</div>
 
 ## Technologies Used
 
