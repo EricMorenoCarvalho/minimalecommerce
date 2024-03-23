@@ -13,11 +13,8 @@
 }
 
 .cart-products {
-  margin-top: 1.5rem;
+  max-height: calc(100vh - 10rem);
   overflow-y: auto;
-  overflow-x: hidden;
-  height: 65svh;
-  width: 100%;
 }
 
 .cartcomponentmain.slide-in {
@@ -43,15 +40,13 @@ hr.rounded {
 }
 
 .checkout {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  width: 35%;
-  margin: 0 auto;
-  height: 20svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
 
