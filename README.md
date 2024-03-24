@@ -13,7 +13,7 @@ You can access to the live demo here: https://minimalecommerce.vercel.app/
 
 The project is primarily developed using:
 
-- React JSX
+- React JS
 - Vanilla CSS
 
 ## Features and Functionalities
